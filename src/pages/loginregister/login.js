@@ -7,4 +7,4 @@ class Login extends React,comments{
         )
     }
 }
-export default login
+export default Login
