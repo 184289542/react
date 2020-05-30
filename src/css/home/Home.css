@@ -1,0 +1,12 @@
+.tabarcss{
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.28125rem;
+}
+.tabarcss a{
+    text-decoration: none;
+}
