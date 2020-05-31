@@ -1,3 +1,8 @@
+*{
+    padding:0;
+    margin:0;
+    background-color: rgba(125, 125, 125, 0.1);
+}
 .tabarcss{
     width: 100%;
     position: fixed;
@@ -6,7 +11,14 @@
     display: flex;
     justify-content: space-around;
     font-size: 1.28125rem;
+    height: 2.8125rem;
+    line-height:2.8125rem ;
+    background-color: white;
 }
 .tabarcss a{
     text-decoration: none;
+    background-color: white;
+}
+.tabarcss a:hover{
+   background-color:rgba(125, 125, 125, 0.1);
 }
