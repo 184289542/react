@@ -1,0 +1,32 @@
+.nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: .015625rem solid #ccc;
+}
+.am-search {
+    width: 80%;
+    border-bottom: 1px solid #ddd;
+    color: white;
+
+  }
+  .sub-title {
+    color: #888;
+    font-size: 14px;
+    padding: 30px 0 18px 0;
+  }
+.imgwidth{
+    width: 1.25rem;
+}
+.caidan{
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: white;
+}
+.login{
+    width: 3.125rem;
+    font-size: 1.25rem;
+    color:#551A8B;
+    text-align: center;
+}
