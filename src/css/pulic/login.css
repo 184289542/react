@@ -1,0 +1,138 @@
+.box{
+    margin-top: 1.3125rem;
+}
+.icon{
+   
+    margin-left: 1rem;
+}
+.top{
+    margin-left: 8rem;
+}
+.boxinput{ 
+    width: 24rem;
+    margin: 0 auto;
+    margin-top: 2.65rem;
+}
+.myinput{
+    width:20.5rem ;
+    height: 2.1rem;
+    outline: none;
+    border: 1px solid #DBD4D4;
+    border-left: none;
+}
+.sel{
+    height: 2.4rem;
+    outline: none;
+    border: 1px solid #DBD4D4;
+    border-right: none;
+}
+.veif{
+    width: 24rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+.box .veifinput{
+    height: 2.1rem;
+    outline: none;
+    border: 1px solid #DBD4D4;
+    width: 18rem;
+}
+.veif button{
+    height: 2.1rem;
+    width: 5.7rem;
+    background-color: white;
+    outline: none;
+    border: none;
+}
+.box .login{
+    width: 24rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+.box .login button{
+    width: 24rem;
+    height: 2.7rem;
+    outline: none;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: #FCB6B3;
+    color: white;
+    font-size: 1rem;
+}
+.box .onelogin{
+    width: 24rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+.box .onelogin button{
+    width: 24rem;
+    height: 2.7rem;
+    outline: none;
+    border: 1px solid #FF8F80;
+    border-radius: 1.5rem;
+    background-color: white;
+    font-size: 1rem;
+}
+.box .changestate{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    outline: none;
+}
+.box .changestate button{
+    background-color: white;
+    border: none;
+    outline: none;
+    color: #B2B2B2;
+}
+.box .bto{
+    margin-top: 5rem;
+}
+.box .bto p{
+    color: #B2B2B2;
+}
+.box .other{
+    width: 6rem;
+    margin: 0 auto;
+}
+.box .bto2 span{
+    font-size: 3rem;
+}
+.box .bto2{
+    width: 16rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.box .bto2 .s1{
+    color: #439FE1;
+}
+.box .bto2 .s2{
+    color:#3FCE4D;
+}
+.box .bto3{
+    width: 15rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.box .bto3 span{
+    color: #B2B2B2;
+}
+.lastbto{
+    width: 22rem;
+    margin: 0 auto;
+}
+.lastbto2{
+    width: 10rem;
+    margin: 0 auto;
+}
+.lastbto2 p{
+    color: #B2B2B2;
+    font-size: 0.8rem;
+}
+.lastbto p{
+    color: #B2B2B2;
+    font-size: 0.8rem;
+}
