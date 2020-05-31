@@ -11,7 +11,7 @@ import Login from "../../pages/loginregister/Login"
 class Home extends React.Component {
     render(){
         return (
-            <div>
+            <div >
                 <div>
                     <Router>
                             <div className="tabarcss">
