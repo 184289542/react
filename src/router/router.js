@@ -5,7 +5,6 @@ import Login from "../pages/loginregister/Login"
 import Home from "../pages/home/Home.js"
 
 
-
 class MyRouter extends React.Component {
     render() {
         return(
@@ -17,7 +16,6 @@ class MyRouter extends React.Component {
                     {/* <Route path="/" component={home}></Route> */}
                     <Route path="/" component={Home}></Route>
                     <Route path="/zhanghao" component={Login}></Route>
-
                 </div>
             </Router>
         )

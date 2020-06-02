@@ -1,0 +1,37 @@
+.product{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.imgbox {
+    width: 9.375rem;
+    background-color: white;
+    margin: .625rem 0;
+}
+.zt_25_img {
+    width: 9.375rem;
+    height:9.375rem;
+}
+.zt_25_logobg {
+    display: block;
+    text-align: center;
+}
+.zt_25_link{
+    display: block;
+    width: 9.375rem;
+    white-space:nowrap; 
+    overflow:hidden; 
+    text-overflow:ellipsis;
+}
+.zt_25_pr{
+    display: block;
+    text-align: center;
+    color: orangered;
+}
+.zt_25_pr_preprice {
+    display: block;
+    text-align: center;
+    color: #ccc;
+    text-decoration: line-through;
+}
