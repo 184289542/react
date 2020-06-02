@@ -13,12 +13,11 @@
     margin: 0 auto;
     margin-top: 2.65rem;
 }
-.myinput{
-    width:20.5rem ;
+.myinput2{
+    width:24rem ;
     height: 2.6rem;
     outline: none;
     border: 1px solid #DBD4D4;
-    border-left: none;
 }
 .sel{
     height: 2.8rem;
@@ -135,4 +134,9 @@
 .lastbto p{
     color: #B2B2B2;
     font-size: 0.8rem;
+}
+.iseye{
+    position: absolute;
+    top: 9.7rem;
+    left: 17rem;
 }

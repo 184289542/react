@@ -1,48 +1,98 @@
 import React from "react"
 import '../../assets/iconfont/iconfont.css'	//引入第三方图标
-import "../../css/pulic/login.css"
+import "../../css/pulic/login2.css"
+import axios from "axios"
+import store from "../../store/index";
 // import { withRouter } from 'react-router-dom';
 
 class Login extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            invalue: ""
+            tel: "",
+            password:"",
+            ispassword: "password",
+            iseye: "iconfont icon-yanjing1"
         }
     }
-    getvalue(e) {
+    gettel(e) {
         this.setState({
-            invalue: e.target.value
+            tel: e.target.value
+        })
+    }
+    getpasd(e) {
+        this.setState({
+            password: e.target.value
         })
     }
     getveif() {
 
     }
-    tozhlogin(){
+    tozhlogin() {
         // console.log(this.props)
-        this.props.history.push("/zhanghao")
+        this.props.history.push("/login")
+    }
+    changeeye() {
+        if (this.state.ispassword == "password") {
+            this.setState({
+                iseye: "iconfont icon-yanjing",
+                ispassword: "text"
+            })
+        } else {
+            this.setState({
+                iseye: "iconfont icon-yanjing1",
+                ispassword: "password"
+            })
+        }
+    }
+    toregister(){
+        this.props.history.push("/register")
+    }
+    goback(){
+        this.props.history.goBack()
+    }
+    login(){
+        let url="http://localhost:7001/login"
+				let params={tel:this.state.tel,password:this.state.password}
+				axios.post(url,params)
+				.then((res)=>{
+					if(res.data.code==2000){
+					   alert(res.data.info)
+					   window.localStorage.setItem("tel",res.data.sta)//设置前端缓存
+					   this.props.history.replace("/myhome")//跳转到首页
+					   store.dispatch({
+                           type:"REDUCE",
+                           data:this.state.tel
+                       });
+					   
+					}
+					else{
+					    alert(res.data.info)
+					}
+					
+				})
     }
     render() {
         return (
             <div className="box">
-                <span className="iconfont icon-jiantou-copy icon"></span>
+                <span onClick={this.goback.bind(this)} className="iconfont icon-jiantou-copy icon"></span>
                 <span className="top">京东登陆注册</span>
                 <div className="boxinput">
-                    <input className="myinput" value={this.state.invalue} onChange={this.getvalue.bind(this)}></input>
+                    <input className="myinput2" placeholder="用户/邮箱/手机" value={this.state.tel} onChange={this.gettel.bind(this)}></input>
                 </div>
                 <div className="veif">
-                    <input className="veifinput" placeholder="请输入收到的验证码"></input>
-                    <button onClick={this.getveif.bind(this)}>获取验证码</button>
+                    <input type={this.state.ispassword} className="veifinput" placeholder="请输入密码" value={this.state.password} onChange={this.getpasd.bind(this)}></input>
+                    <button onClick={this.getveif.bind(this)}>忘记密码</button>
                 </div>
                 <div className="login">
-                    <button>登 陆</button>
+                    <button onClick={this.login.bind(this)}>登 陆</button>
                 </div>
                 <div className="onelogin">
                     <button>一键登录</button>
                 </div>
                 <div className="changestate">
                     <button onClick={this.tozhlogin.bind(this)}>账号密码登陆</button>
-                    <button>手机快速注册</button>
+                    <button onClick={this.toregister.bind(this)}>手机快速注册</button>
                 </div>
                 <div className="bto">
                     <p className="other">其它方式登陆</p>
@@ -61,7 +111,10 @@ class Login extends React.Component {
                     <p>未注册过的手机号验证过后将自动创建京东账号，登陆即代表</p>
                 </div>
                 <div className="lastbto2">
-                <p>您已同意京东隐私协议</p>
+                    <p>您已同意京东隐私协议</p>
+                </div>
+                <div className="iseye" onClick={this.changeeye.bind(this)}>
+                    <i className={this.state.iseye}></i>
                 </div>
             </div>
         )

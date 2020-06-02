@@ -1,6 +1,7 @@
 import React from "react"
 import '../../assets/iconfont/iconfont.css'	//引入第三方图标
 import "../../css/pulic/login.css"
+import store from "../../store/store";
 // import { withRouter } from 'react-router-dom';
 
 class MyLogin extends React.Component {
@@ -24,14 +25,24 @@ class MyLogin extends React.Component {
     getveif() {
 
     }
-    tozhlogin(){
+    tozhlogin() {
         // console.log(this.props)
         this.props.history.push("/zhanghao")
+    }
+    componentDidMount() {
+        // 当直接输入地址访问此页面，底部的TabBar会使用初始值显示，这个操作是为了隐藏TabBar
+        store.dispatch({ type: "HIDDEN" })
+    }
+    toregister() {
+        this.props.history.push("/register")
+    }
+    goback(){
+        this.props.history.goBack();
     }
     render() {
         return (
             <div className="box">
-                <span className="iconfont icon-jiantou-copy icon"></span>
+                <span onClick={this.goback.bind(this)} className="iconfont icon-jiantou-copy icon"></span>
                 <span className="top">京东登陆注册</span>
                 <div className="boxinput">
                     <select className="sel" value={this.state.sevalue} onChange={this.changesc.bind(this)}>
@@ -59,7 +70,7 @@ class MyLogin extends React.Component {
                 </div>
                 <div className="changestate">
                     <button onClick={this.tozhlogin.bind(this)}>账号密码登陆</button>
-                    <button>手机快速注册</button>
+                    <button onClick={this.toregister.bind(this)}>手机快速注册</button>
                 </div>
                 <div className="bto">
                     <p className="other">其它方式登陆</p>
@@ -78,7 +89,7 @@ class MyLogin extends React.Component {
                     <p>未注册过的手机号验证过后将自动创建京东账号，登陆即代表</p>
                 </div>
                 <div className="lastbto2">
-                <p>您已同意京东隐私协议</p>
+                    <p>您已同意京东隐私协议</p>
                 </div>
             </div>
         )

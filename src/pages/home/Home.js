@@ -7,6 +7,7 @@ import MyJingXi from "./MyJingXi.js"
 import MyLogin from "./MyLogin.js"
 import "../../css/home/Home.css"
 import Login from "../../pages/loginregister/Login"
+import Register from "../../pages/loginregister/Register"
 
 class Home extends React.Component {
     render(){
@@ -29,6 +30,7 @@ class Home extends React.Component {
                                 <Route path="/gouwuche"  component={MyGouWuChe}></Route>
                                 <Route path="/login"  component={MyLogin}></Route>
                                 <Route path="/zhanghao" component={Login}></Route>
+                                <Route path="/register" component={Register}></Route>
                             </Switch>
                     </Router>
                 </div>

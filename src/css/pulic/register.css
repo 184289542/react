@@ -1,0 +1,31 @@
+.registerbox{
+    width: 24rem;
+    margin: 0 auto;
+    margin-top: 2.65rem;
+}
+.registerbox input{
+    width:24rem ;
+    height: 2.6rem;
+    outline: none;
+    border: 1px solid #DBD4D4;
+}
+.registerbox .in2{
+    margin-top: 1rem;
+}
+.registerbox .in3{
+    margin-top: 1rem;
+    width:16rem ;
+}
+.box .bjm{
+    width: 24rem;
+    margin: 0 auto;
+    margin-top: 2.65rem;
+}
+.box .btt{
+    height: 2.6rem;
+    width: 24rem;
+    background-color: #FCB5B3;
+    border-radius: 3rem;
+    border: none;
+    outline: none;
+}
