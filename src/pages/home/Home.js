@@ -1,5 +1,5 @@
 import React from "react"
-import {BrowserRouter as Router, Route,Link,Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route,Link,Switch,Redirect} from "react-router-dom";
 import MyFenLei from "./MyFenLei.js"
 import MyGouWuChe from "./MyGouWuChe.js"
 import MyHome from "./MyHome.js"
@@ -7,6 +7,7 @@ import MyJingXi from "./MyJingXi.js"
 import MyLogin from "./MyLogin.js"
 import "../../css/home/Home.css"
 import Login from "../../pages/loginregister/Login"
+import ProductShow from "../product/ProductShow.js"
 
 class Home extends React.Component {
     render(){
@@ -29,6 +30,9 @@ class Home extends React.Component {
                                 <Route path="/gouwuche"  component={MyGouWuChe}></Route>
                                 <Route path="/login"  component={MyLogin}></Route>
                                 <Route path="/zhanghao" component={Login}></Route>
+                                <Route path="/product" component={ProductShow}></Route>
+                                {/*通过重定向显示默认的子组件,先有path再有重定向*/}
+                                <Redirect to="/myhome"></Redirect>
                             </Switch>
                     </Router>
                 </div>

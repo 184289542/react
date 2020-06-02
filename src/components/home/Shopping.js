@@ -1,6 +1,7 @@
 import React from "react"
 import axios from 'axios';
 import "../../css/home/Shopping.css"
+import { withRouter } from 'react-router-dom'
 
 class Shopping extends React.Component {
     constructor(props){
@@ -16,8 +17,12 @@ class Shopping extends React.Component {
             this.setState({
                 mydata:result.data
             })
-            console.log(this.state.mydata)
+            // console.log(this.state.mydata)
         })
+    }
+    getid(brand){
+        // this.props.history.push("/news/detail?id=2&title=新闻详情3")
+        this.props.history.replace(`/product?brand=${brand}&title=商品详情`)
     }
     render(){
         return (
@@ -27,13 +32,12 @@ class Shopping extends React.Component {
                     { 
                         this.state.mydata.map((item,index)=>{
                             return (
-                                <div key={index} className="showimg">
+                                <div key={index} className="showimg" onClick={this.getid.bind(this,item.brand)}>
                                     <img src={item.imgsrc} alt=""  />
                                     <div className="showword">
                                         <div className="show_word">{item.word1}</div>
                                         <div className="show_word">{item.word2}</div>
                                         <div className="show_word2">{item.price}</div>
-                                        {/* <div>{showtime}</div> */}
                                     </div>
                                 </div>
                             )
@@ -44,4 +48,4 @@ class Shopping extends React.Component {
         )
     }
 }
-export default Shopping
+export default withRouter(Shopping)
