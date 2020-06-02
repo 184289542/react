@@ -1,0 +1,29 @@
+.recommend-title{
+    width: 100%;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: salmon;
+    text-align: center;
+    margin-top: .3125rem;
+}
+.recommend-bigbox{
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: .3125rem;
+}
+.recommend-imgbox{
+    width: 5.3125rem;
+    height: 7.1875rem;
+    border: .015625rem solid pink;
+    text-align: center;
+}
+.recommend-imgbox img{
+    width: 5.3125rem;
+    height: 4.6875rem;
+}
+.recommend-imgbox-word{
+    background-color: pink;
+    color:orangered;
+    font-size: 1rem;
+}

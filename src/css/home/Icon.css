@@ -1,0 +1,20 @@
+.allicon{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: .3125rem;
+    background-color: #DDDFEE;
+}
+.allicon-box{
+    width: 4.6875rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.allicon-box img{
+    width: 2.8125rem;
+    height: 2.8125rem;
+}
