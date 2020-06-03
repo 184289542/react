@@ -1,0 +1,18 @@
+.remen_title{
+    font-size: 1.25rem;
+    margin-bottom: .3125rem;
+}
+.remem_imgbigbox{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.remem_imgbox {
+    width: 4.6875rem;
+    text-align: center;
+}
+.remem_imgbox img{
+    width: 4.6875rem;
+    height:  4.6875rem;
+}

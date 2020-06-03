@@ -91,9 +91,13 @@ class ProductDetails extends React.Component {
         }
        
     }
+    // back(){
+    //     this.props.history.replace("/product")
+    // }
     render(){
         return (
             <div>
+                {/* <div className="icon_zuojiantou" onClick={this.back.bind(this)}><img src={require('../../assets/img/左箭头.png')} alt=""></img></div> */}
                 {/* <div>我是商品的详情页面</div> */}
                 {/* 头部搜索框 */}
                 <Nav></Nav>

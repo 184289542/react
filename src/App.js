@@ -9,7 +9,6 @@ function App() {
     return (
       <div>
         <Home></Home>
-	      {/* <Myrouter></Myrouter> */}
       </div>
     )
 }
