@@ -44,8 +44,8 @@ class MyLogin extends React.Component {
             <div className="box">
                 <span onClick={this.goback.bind(this)} className="iconfont icon-jiantou-copy icon"></span>
                 <span className="top">京东登陆注册</span>
-                <div className="boxinput">
-                    <select className="sel" value={this.state.sevalue} onChange={this.changesc.bind(this)}>
+                <div className="boxinputd">
+                    <select className="selec" value={this.state.sevalue} onChange={this.changesc.bind(this)}>
                         <option value="+86">+86</option>
                         <option>+852</option>
                         <option>+853</option>
@@ -56,7 +56,7 @@ class MyLogin extends React.Component {
                         <option>+64</option>
                         <option>+81</option>
                     </select>
-                    <input className="myinput" value={this.state.invalue} onChange={this.getvalue.bind(this)}></input>
+                    <input className="myinputdd" value={this.state.invalue} onChange={this.getvalue.bind(this)}></input>
                 </div>
                 <div className="veif">
                     <input className="veifinput" placeholder="请输入收到的验证码"></input>

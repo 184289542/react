@@ -1,6 +1,6 @@
 
 const defaultState = {
-    
+    login:"未登录"
 }
 
 //2.通过reducer提供数据源，reducer是一个纯函数
@@ -11,7 +11,12 @@ const reducer = (state = defaultState, action)=> {
 
     switch(action.type) {
         case "REDUCE": 
-            
+        // return Object.assign({}, state, {
+        //     visibilityFilter: action.data
+        //   })
+            state.login=action.data
+            state.login=state.login
+            console.log(state.login)
             break;
         case "ADD": 
            

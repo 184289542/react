@@ -8,19 +8,19 @@
 .top{
     margin-left: 8rem;
 }
-.boxinput{ 
+.boxinputd{ 
     width: 24rem;
     margin: 0 auto;
     margin-top: 2.65rem;
 }
-.myinput{
-    width:20.5rem ;
+.myinputdd{
+    width:20rem ;
     height: 2.6rem;
     outline: none;
     border: 1px solid #DBD4D4;
     border-left: none;
 }
-.sel{
+.selec{
     height: 2.8rem;
     outline: none;
     border: 1px solid #DBD4D4;

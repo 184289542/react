@@ -10,11 +10,25 @@ class Login extends React.Component {
         super(props);
         this.state = {
             tel: "",
-            password:"",
+            password: "",
             ispassword: "password",
             iseye: "iconfont icon-yanjing1"
         }
     }
+    componentDidMount() {
+        // 订阅store改变事件
+        store.subscribe(this.update.bind(this));
+    }
+    update() {
+
+        this.setState(store.getState())
+
+    }
+    componentWillUnmount = () => {
+        this.setState = (state,callback)=>{
+          return;
+        };
+    }    
     gettel(e) {
         this.setState({
             tel: e.target.value
@@ -45,32 +59,40 @@ class Login extends React.Component {
             })
         }
     }
-    toregister(){
+    toregister() {
         this.props.history.push("/register")
     }
-    goback(){
+    goback() {
         this.props.history.goBack()
     }
-    login(){
-        let url="http://localhost:7001/login"
-				let params={tel:this.state.tel,password:this.state.password}
-				axios.post(url,params)
-				.then((res)=>{
-					if(res.data.code==2000){
-					   alert(res.data.info)
-					   window.localStorage.setItem("tel",res.data.sta)//设置前端缓存
-					   this.props.history.replace("/myhome")//跳转到首页
-					   store.dispatch({
-                           type:"REDUCE",
-                           data:this.state.tel
-                       });
-					   
-					}
-					else{
-					    alert(res.data.info)
-					}
-					
-				})
+    changedata(){
+        store.dispatch({
+            type: "REDUCE",
+            data: "个人中心"
+        });
+    }
+    login() {
+        let url = "http://localhost:7001/login"
+        let params = { tel: this.state.tel, password: this.state.password }
+        axios.post(url, params)
+            .then((res) => {
+                if (res.data.code == 2000) {
+                    alert(res.data.info)
+                    // window.localStorage.setItem("tel", res.data.sta)//设置前端缓存
+                    localStorage["noLogin"]="个人中心"
+                    localStorage["isout"]="退出"
+                    localStorage["isLogin"]=true
+                    // this.changedata()
+                    this.props.history.replace("/myhome")//跳转到首页
+                    window.location.reload([true])
+                   
+
+                }
+                else {
+                    alert(res.data.info)
+                }
+
+            })
     }
     render() {
         return (
