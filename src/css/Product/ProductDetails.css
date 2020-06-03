@@ -1,0 +1,65 @@
+.icon_zuojiantou img{
+    width: 1.25rem;
+    height: 1.25rem;
+}
+.product_word{
+    width: 100%;
+    text-align: center;
+    color: orange;
+    font-size: 1.25rem;
+}
+.shopping{
+    margin: .3125rem 0 9.375rem 0;
+    background-color: white;
+    text-align: center;
+}
+.shopping .img1{
+    width: 100%;
+}
+.shopping .shopping_icon img{
+    width: 30%;
+}
+.shopping_introduction{
+    width: 100%;
+    /* text-align: center; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+}
+.shopping .shopping_price {
+    margin-top: .3125rem;
+    font-size: 1.09375rem;
+    color: orange;
+    font-weight: bold;
+}
+.shopping_carbox{
+    display: flex;
+    justify-content: center;
+}
+.shopping_size{
+    text-align: left;
+}
+.shopping_size .shopping_selectsize{
+    display: flex;
+    justify-content: center;
+}
+.shopping_selectsize div{
+    width: 4.0625rem;
+    height: 2.1875rem;
+    border:  .015625rem solid #ccc;
+    text-align: center;
+    line-height: 2.1875rem;
+}
+.shopping_car{
+    margin-top: .3125rem;
+    width: 6.875rem;
+    height: 2.8125rem;
+    background-color: red;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 2.8125rem;
+    text-align: center;
+    border-radius: 2.8125rem;
+}

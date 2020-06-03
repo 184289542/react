@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-ro
 import MyFenLei from "./MyFenLei.js"
 import MyGouWuChe from "./MyGouWuChe.js"
 import MyHome from "./MyHome.js"
-// import MyJingXi from "./MyJingXi.js"
 import MyLogin from "./MyLogin.js"
 import "../../css/home/Home.css"
 import Login from "../../pages/loginregister/Login"
@@ -12,6 +11,7 @@ import ProductShow from "../product/ProductShow.js"
 // import store from "../../store/index"
 import Mine from "../loginregister/Mine"
 import Authoroutr from "../../components/Authorrouter"
+import ProductDetails from "../product/ProductDetails.js"
 
 class Home extends React.Component {
     componentDidMount(){

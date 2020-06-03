@@ -10,12 +10,16 @@ class ProductShow extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            mydata:[]
+            mydata:[],
+            mybrand:""
         }
     }
     componentDidMount(){
         // localParam(this.props.location.search).search.id
         let brand = localParam(this.props.location.search).search.brand;
+        this.setState({
+            mybrand:brand
+        })
         let url = "http://localhost:7001/productShow";
         let obj = {
             sqllistname: brand
@@ -28,6 +32,10 @@ class ProductShow extends React.Component {
                 })
             })
 
+    }
+    getid(id){
+        // console.log(id,this.state.mybrand)
+        this.props.history.replace(`/productdetails?listname=${this.state.mybrand}&id=${id}&title=单件商品详情`)
     }
     render(){
         return (
@@ -44,7 +52,7 @@ class ProductShow extends React.Component {
                     {
                         this.state.mydata.map((item,index)=>{
                             return (
-                                <div key={index} className="imgbox">
+                                <div key={index} className="imgbox" onClick={this.getid.bind(this,item.id)}>
                                     <a href="#" title="阿迪达斯运动生活-跑步运动圆领短袖T恤-白色-EJ7080" ><img src={item.imgurl}
                                     alt="阿迪达斯运动生活-跑步运动圆领短袖T恤-白色-EJ7080" className="zt_25_img" /></a>
                                     <span className="zt_25_logobg"><span className="BLB"><img src={item.icon} /></span></span>

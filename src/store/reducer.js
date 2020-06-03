@@ -1,6 +1,9 @@
 
 const defaultState = {
-    login:"未登录"
+
+    login:"未登录",
+
+    size:""
 }
 
 //2.通过reducer提供数据源，reducer是一个纯函数
@@ -32,7 +35,20 @@ const reducer = (state = defaultState, action)=> {
             break;
         case "CHANGE": 
             
+        case "mysizeS": 
+           state.size = "S"
+
             break;
+        case "mysizeM": 
+            state.size = "M"
+             break;
+        case "mysizeL": 
+             state.size = "L"
+              break;
+        case "mysizeXL": 
+            state.size = "XL"
+             break;
+
             default: break;
     }
     
