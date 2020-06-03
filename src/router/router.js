@@ -1,7 +1,6 @@
 import React from "react";
 import {HashRouter as Router, Route} from "react-router-dom";
 import Login from "../pages/loginregister/Login"
-// import {Link} from "react-router-dom";
 import Home from "../pages/home/Home.js"
 
 

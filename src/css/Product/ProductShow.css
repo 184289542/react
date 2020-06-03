@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-bottom: 4.6875rem;
 }
 .imgbox {
     width: 9.375rem;

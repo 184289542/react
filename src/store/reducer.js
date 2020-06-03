@@ -1,6 +1,6 @@
 
 const defaultState = {
-    
+    size:""
 }
 
 //2.通过reducer提供数据源，reducer是一个纯函数
@@ -10,24 +10,19 @@ const defaultState = {
 const reducer = (state = defaultState, action)=> {
 
     switch(action.type) {
-        case "REDUCE": 
-            
+        case "mysizeS": 
+           state.size = "S"
             break;
-        case "ADD": 
-           
-            break;
-        case "ADD_STU": 
-            
-            break;
-        case "DEL_STU": 
-            
-            break;
-        case "INSERT_STU": 
-           
-            break;
-        case "CHANGE": 
-            
-            break;
+        case "mysizeM": 
+            state.size = "M"
+             break;
+        case "mysizeL": 
+             state.size = "L"
+              break;
+        case "mysizeXL": 
+            state.size = "XL"
+             break;
+
             default: break;
     }
     
